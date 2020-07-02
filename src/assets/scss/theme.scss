@@ -1,0 +1,90 @@
+// ========================================
+// THEME SCSS
+// ========================================
+
+// import tailwind
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Your variable overrides
+$enable-responsive-font-sizes: true;
+$enable-shadows: true;
+
+// --- fonts ---
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,800,900&display=swap");
+$font-family-sans-serif: 'Inter';
+
+// --- dropdown ---
+$dropdown-font-size: 1rem;
+
+// --- list ---
+$list-group-border-radius: 0;
+$list-group-border-width: 0rem;
+
+// --- color ---
+$primary: #00c853 !default; // green accent-4
+$accent: #283593 !default; // indigo darken-3
+
+$secondary: $accent !default;
+$success: $primary !default;
+$info: $primary !default;
+$warning: $primary !default;
+$danger: $primary !default;
+$white: #ffffff !default;
+$light: #f8f9fa !default;
+$dark: #343a40 !default;
+$grey: #eeeeee !default;
+
+$body-color: #333333;
+$body-bg: #F0F2F5;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        'primary': $primary,
+        'accent': $accent,
+        'light': $light,
+        'dark': $dark,
+        'grey': $grey,
+    ),
+    $theme-colors
+);
+
+// --- form, input, button ---
+$btn-focus-box-shadow: none !important;
+$input-focus-box-shadow: none !important;
+$input-focus-border-color: $grey;
+$input-focus-width: 1px !default;
+$input-border-width: 1px !default;
+$input-bg: $body-bg;
+
+// --- navbar ---
+$navbar-dark-color: rgba($white, 1) !default;
+$navbar-dark-hover-color: rgba($white, .8) !default;
+
+// --- scrollbar ---
+::-webkit-scrollbar-track {
+    border: none;
+    background-color: #dadada;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #aeaeae;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aeaeae;
+}
+
+// ========================================
+// IMPORT BOOTSTRAP SCSS
+// ========================================
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+// imports core scss file
+@import "./vendor/materialdesignicons";
+@import "./vendor/animate";
+@import "./vendor/colors";
